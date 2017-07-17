@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The best offers for you!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="fonts/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+    <style type="text/css">
+		#successDialog{
+        	margin-top: 50px;
+        }
+
+        #advertiseRequestForm{
+        	margin-top: 30px;
+        }
+
+        .mandatory{
+        	color: red;
+        }
+
+    </style>
+
+    
+
+</head>
+
+<body>
+
+    <div class="container top-banner-container">
+        <div class="row top-banner">
+            <div class="col-sm-6 top-banner-sub-first">
+                <a href="index.html">
+                    <img class="logo-image img-responsive" src="images/shopping_bag_logo.png" alt="logo"></img>
+                    <span class="logo-text">OffersPromo</span>
+                </a>
+            </div>
+            <div class="col-sm-6 text-right top-banner-sub-second">
+                <span class="logo-sub-text">Best offers from </span>
+                <a href="http://www.amazon.in/" target="_blank">
+                    <img class="logo-sub-image img-responsive" src="images/amazon_logo.png" alt="sub logo"></img>
+                    <span class="logo-sub-text">Amazon.in</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" data-spy="affix" data-offset-top="120">
+        <div class="container top-menubar-container">
+            <div class="top-menubar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand top-nav-brand" href="index.html">OffersPromo Home</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav top-menu-items">
+                            <li><a href="index.html">Offers</a></li>
+                            <li><a href="UnderDevelopment.html">Upcoming</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Help 
+									<span class="caret"></span>
+								</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="ContactUs.html">Contact Us</a></li>
+                                    <li><a href="AboutUs.html">About Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right top-menu-items">
+                            <li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h2 class="text-center">Interested in Advertising With Us to Grow Your Business? </h2>
+        <h3 class="text-center">That's great! Please fill the details in below and submit</h3>
+
+        <div class="row">
+
+        <div class="col-sm-offset-2 col-sm-8">
+
+        <i> <i class="mandatory">*</i> - Required fields</i>
+
+        <form id="advertiseRequestForm" class="form-horizontal" action="#">
+            <div class="form-group">
+                <label class="control-label col-sm-3">Full Name:<i class="mandatory">*</i></label>
+                <div class="col-sm-5 col-md-4">
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name">
+                </div>
+                <div class="col-sm-5 col-md-4">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Email:<i class="mandatory">*</i></label>
+                <div class="col-sm-10 col-md-8">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email id">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Phone:</label>
+                <div class="col-sm-10  col-md-8">
+                    <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Advertising Requirement:<i class="mandatory">*</i></label>
+                <div class="col-sm-10  col-md-8">
+                    <textarea class="form-control" id="advRequirement" name="advRequirement" rows="10" placeholder="Please describe you advertising requirments in brief. It should be minimum 50 characters."></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Contact Preferences:</label>
+                <div class="col-sm-offset-3 col-sm-8">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Reach me by external email id</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Reach me by OffersPromo account notifications</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Reach me on my phone</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-8">
+                    <button type="submit" id="btnSubmit" name="btnSubmit" class="btn btn-primary">Submit</button>
+                    <button type="reset" id="btnReset" name="btnReset" class="btn btn-warning">Reset</button>
+                </div>
+            </div>
+        </form>
+
+       	</div>
+		</div>
+
+		<!-- MODAL DIALOG -->
+        <div class="modal fade" id="successDialog" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Success</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Thank you very much for showing interest to do business with us.
+                        Our advertising business team will contact you soon</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+    </div>
+
+    <footer>
+
+        <div class="container footer">
+            <div class="text-center social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100018930644914" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="UnderDevelopment.html" target="_blank"><i class="fa fa-twitter fa-2x"> </i></a>
+                <a href="UnderDevelopment.html" target="_blank"><i class="fa fa-feed fa-2x"> </i></a>   
+                <a href="UnderDevelopment.html" target="_blank"><i class="fa fa-linkedin fa-2x"> </i></a>   
+                <a href="https://www.youtube.com/channel/UCx2CAokV5Qh18DmtVYDImCg" target="_blank"><i class="fa fa-youtube fa-2x"> </i></a> 
+            </div>  
+
+            <div class="row">
+                <div class="col-sm-offset-3 col-sm-8">
+                    <div class="row footer-links-header">
+                        <div class="col-sm-4">
+                            Products From
+                        </div>
+                        <div class="col-sm-4">
+                            Support
+                        </div>
+                        <div class="col-sm-4">
+                            Help
+                        </div>
+                    </div>
+                    <div class="row footer-links">
+                        <div class="col-sm-4">
+                            <a href="http://www.amazon.in/" target="_blank">Amazon.in</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="AdvertiseRequest.html">Advertise</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="AboutUs.html">About US</a>
+                        </div>
+                    </div>
+                    <div class="row footer-links">
+                        <div class="col-sm-4">
+                            <a href="https://www.flipkart.com/" target="_blank">Flipkart</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="BuyingGuide.html">Buying guide</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="ContactUs.html">Contact US</a>
+                        </div>
+                    </div>
+                    <div class="row footer-links">
+                        <div class="col-sm-offset-4 col-sm-4">
+                            <a href="CustomerSupport.html">Technical support</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="CompanyEvents.html">Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center policy-links">
+                <span><a href="PrivacyPolicy.html">Privacy Policy</a></span>
+                <span><a href="Cookies.html">Cookies</a></span>
+                <span><a href="TermsOfUse.html">Terms of Use</a></span>
+            </div>  
+
+            <div class="copyright text-center">
+                <i class="fa fa-copyright"> </i>
+                Copyright 2017 KANAVUGAL STUDIOS. All Rights Reserved
+            </div>  
+        </div>
+
+    </footer>
+
+</body>
+
+<script type="text/javascript">
+
+	$("#advertiseRequestForm").validate({
+		rules: {
+		    firstName: "required",
+		    lastName: "required",
+		    email: {
+		    	required: true,
+		    	email: true
+		    },
+		    advRequirement: {
+		    	required: true,
+		    	minlength: 50
+		    }
+		},
+	  	messages: {
+		    firstname: "Please enter your firstname",
+		    lastname: "Please enter your lastname",
+		    email: "Please enter a valid email address",
+		    advRequirement: {
+		    	required: "Pleaes provide your Advertise Requirement",
+		    	minlength: "Please enter minimum 50 characters to describe the requirement"
+		    }
+	  	},
+	  	submitHandler: function(form) {
+		    $("#successDialog").modal('show');
+		    /*
+		    form.submit();
+
+		  	if you submit model will be dismissed. so not submitting. only for test phase.
+		  	in realtime you dont need model. so u can submit.
+		    */
+	  }
+	});
+
+
+	$('.modal').on('hidden.bs.modal', function(){
+	    $( '#advertiseRequestForm').each(function(){
+	    	this.reset();
+		});
+	});
+
+	
+</script>
+
+</html>
