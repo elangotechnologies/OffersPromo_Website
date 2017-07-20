@@ -12,24 +12,25 @@
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 
     <style type="text/css">
-		main{
-			margin-top: 50px;
+		
+		.carousel{
+			overflow: hidden;
 		}
-
+		
+		.carousel-inner > .item > img {
+			width:100%;
+			height: 250px;
+		}
+		
         main p {
             text-align: justify;
         }
-        
-        main > .panel-group{
-        	width: 103%;
-        	height: 300px;
-        	margin-left: -15px;
-        }
 
-        .panel-body img{
-         	height: 100%;
-         	width: 100%;
-        }
+        .phones{
+	    	margin-top: 50px;
+	    }
+        
+        
 
         .panel-body a{
         	text-decoration: none;
@@ -75,27 +76,35 @@
         	font-weight: bolder;
         }
         
-		.phone-item-content .panel-heading{
+		.phone-item-details .panel-heading{
 			color: #263F87;
 			font-weight: bold;
 		}
-
+		
 		.phone-spec ul{
 			list-style: none;
 			padding: 0;
 		}
-
+		
 		.phone-spec li {
 			padding-left: 1.9em;
 			padding-bottom: 5px;
 		}
-
+		
 		.phone-spec li:before {
 			content: "\f0fb";
 			font-family: FontAwesome;
 			display: inline-block;
 			margin-left: -1.9em;
 			width: 1.9em;
+		} 
+
+		.buy-from img{
+			height: 35px;
+		}
+
+		.more-details-link{
+			padding-left: 20px;
 		}
 
     </style>
@@ -103,260 +112,214 @@
 </head>
 <body>
 
-	<div class="container top-banner-container">
+	<header>
 		<div class="row top-banner">
 			<div class="col-sm-6 top-banner-sub-first">
 				<a href="index.html">
 					<img class="logo-image img-responsive" src="images/shopping_bag_logo.png" alt="logo"></img>
-					<span class="logo-text">OffersPromo</span>
+					<span class="logo-text">OFFERS PROMO</span>
 				</a>
 			</div>
 			<div class="col-sm-6 text-right top-banner-sub-second">
 				<span class="logo-sub-text">Best offers from </span>
 				<a href="http://www.amazon.in/" target="_blank">
-					<img class="logo-sub-image img-responsive" src="images/amazon_logo.png" alt="sub logo"></img>
+					<i class="fa fa-amazon logo-sub-image" aria-hidden="true"></i>
 					<span class="logo-sub-text">Amazon.in</span>
 				</a>
 			</div>
 		</div>
-	</div>
+	</header>
 
-	<nav class="navbar" data-spy="affix" data-offset-top="120" >
-		<div class="container top-menubar-container">
-			<div class="top-menubar">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>                        
-					</button>
-					<a class="navbar-brand top-nav-brand" href="index.html">OffersPromo Home</a>
-				</div>
-				<div class="top-menu-items">
-					<div class="collapse navbar-collapse">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Offers</a></li>
-							<li><a href="UnderDevelopment.html">Upcoming</a></li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Help 
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="ContactUs.html">Contact Us</a></li>
-									<li><a href="AboutUs.html">About Us</a></li>
-								</ul>
-							</li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right top-menu-items">
-							<li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							<li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-						</ul>
-					</div>
+	<nav class="navbar navbar-default" data-spy="affix" data-offset-top="70" >
+		<div class="top-menubar">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand top-nav-brand" href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+			</div>
+			<div class="top-menu-items">
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Offers</a></li>
+						<li><a href="UnderDevelopment.html">Upcoming</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Help 
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="ContactUs.html">Contact Us</a></li>
+								<li><a href="AboutUs.html">About Us</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right top-menu-items">
+						<li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-	<div id="myCarousel" class="container carousel slide" data-ride="carousel">
+	<main>
 
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-
-		<div class="carousel-inner">
-
-			<div class="item active">
-				<img src="images/phones_straight_view.jpg" alt="multiple phones image"></img>
-				<div class="carousel-caption">
-					<h1>Smart Phone Offers</h1>
-					<p>Get all the smart phone offers at one place</p>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="images/phone_slide1.png" alt="phones slider image">
+					<div class="carousel-caption">
+					</div>
 				</div>
+				<div class="item">
+					<img src="images/phone_slide2.png" alt="phones slider image">
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/phone_slide3.png" alt="phones slider image">
+					<div class="carousel-caption">
+					</div>
+				</div>				
 			</div>
-
-
-			<div class="item">
-				<img src="images/phones_green_gross.jpg" alt="multiple phones image"></img>
-				<div class="carousel-caption">
-					<h1>Smart Phone Offers</h1>
-					<p>Get all the smart phone offers at one place</p>
-				</div>
-			</div>
-
-			
-			<div class="item">
-				<img src="images/phone_stand_back.jpg" class="img-responsive" alt="multiple phones image"></img>
-				<div class="carousel-caption">
-					<h1>Smart Phone Offers</h1>
-					<p>Get all the smart phone offers at one place</p>
-				</div>
-			</div>				
-
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			</a>
 		</div>
 
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-	</div>
-
-
-	<main class="container">
-
-        <div class="panel-group">
-            <div class="panel panel-info phone-item">
-                <div class="panel-heading">HTC Desire 826 (Dual SIM, Blue Lagoon) -
-                	<span class="star-ratings" star-ratings-value="3"></span> -
-					<span class="offer-percent">51% OFF</span>
-				</div>
-                <div class="panel-body">
-                	<div class="col-sm-3">
-                		<img src="images/HTC Desire 826/1.jpg" class="img-thumbnail" alt="HTC Desire 826">
-                	</div>
-                	<div class="col-sm-9">
-						<div class="panel-group phone-item-content">
-							<div class="panel panel-info price-info">
-				                <div class="panel-heading">Price and Offer Details:</div>
-				                <div class="panel-body">
-			                		<p>
-			                			<span>M.R.P.: <i class="fa fa-inr"></i> </span>
-			                			<span class="mrp-price">28,490.00</span>
-			                		</p>
-									<p>
-										<span>Price: <i class="fa fa-inr"></i> </span>
-										<span class="cur-price">13,900.00</span><b>, FREE Delivery</b>
-									</p>
-									<p>
-										<span>You Save: <i class="fa fa-inr"></i> </span>
-										<span class="saved-amount">14,590.00 <b>(51%)</b></span>
-									</p>
-									<p>Inclusive of all taxes</p>
+		<div class="container phones">
+	        <div class="panel-group">
+	            <div class="panel panel-info phone-item">
+	                <div class="panel-heading">HTC Desire 826 (Dual SIM, Blue Lagoon) -
+	                	<span class="star-ratings" star-ratings-value="3"></span> -
+	        			<span class="offer-percent">51% OFF</span>
+	        		</div>
+	                <div class="panel-body">
+	                	<div class="col-sm-3">
+	                		<img src="images/HTC Desire 826/1.jpg" class="img-thumbnail" alt="HTC Desire 826">
+	                	</div>
+	                	<div class="col-sm-9">
+							<div class="panel-group phone-item-details">
+								<div class="panel panel-info price-info">
+					                <div class="panel-heading">Price and Offer Details:</div>
+					                <div class="panel-body">
+				                		<p>
+				                			<span>M.R.P.: <i class="fa fa-inr"></i> </span>
+				                			<span class="mrp-price">28,490.00</span>
+				                		</p>
+										<p>
+											<span>Price: <i class="fa fa-inr"></i> </span>
+											<span class="cur-price">13,900.00</span><b>, FREE Delivery</b>
+										</p>
+										<p>
+											<span>You Save: <i class="fa fa-inr"></i> </span>
+											<span class="saved-amount">14,590.00 <b>(51%)</b></span>
+										</p>
+										<p>Inclusive of all taxes</p>
+									</div>
+								</div>
+								<div class="panel panel-info phone-spec">
+					                <div class="panel-heading">Phone Specifications:</div>
+					                <div class="panel-body">
+										<ul>
+											<li>13MP primary camera with autofocus, LED flash and 13MP front facing camera</li>
+											<li>5.5-inch (13.97 centimeters) IPS HD capacitive touchscreen with 1920 x 1080 pixels resolution</li>
+											<li>Android v5.0 Lollipop operating system with Snapdragon 615 octa core processor, 2GB RAM, 16GB internal memory expandable up to 128GB and dual SIM (GSM+GSM)</li>
+											<li>2600mAH lithium-ion battery</li>
+											<li>1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase</li>
+										</ul>
+										<span class="buy-from">
+											<a href="http://www.amazon.in/HTC-Desire-826-Dual-Lagoon/dp/B00UFPI110/ref=sr_1_15?s=electronics&ie=UTF8&qid=1500209374&sr=1-15" target="_blank">
+												<img src="images/buy_in_amazon.png">
+											</a>
+											<a href="http://www.amazon.in/HTC-Desire-826-Dual-Lagoon/dp/B00UFPI110/ref=sr_1_15?s=electronics&ie=UTF8&qid=1500209374&sr=1-15" target="_blank" class="more-details-link">
+												<b><i class="fa fa-angle-double-right"></i> See more product details</b>
+											</a>
+										</span>
+									</div>
 								</div>
 							</div>
-							<div class="panel panel-info phone-spec">
-				                <div class="panel-heading">Phone Specifications:</div>
-				                <div class="panel-body">
-									<ul>
-										<li>13MP primary camera with autofocus, LED flash and 13MP front facing camera</li>
-										<li>5.5-inch (13.97 centimeters) IPS HD capacitive touchscreen with 1920 x 1080 pixels resolution</li>
-										<li>Android v5.0 Lollipop operating system with Snapdragon 615 octa core processor, 2GB RAM, 16GB internal memory expandable up to 128GB and dual SIM (GSM+GSM)</li>
-										<li>2600mAH lithium-ion battery</li>
-										<li>1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase</li>
-									</ul>
-									<a href="http://www.amazon.in/HTC-Desire-826-Dual-Lagoon/dp/B00UFPI110/ref=sr_1_15?s=electronics&ie=UTF8&qid=1500209374&sr=1-15">
-										<p><b><i class="fa fa-angle-right"></i></b> See more product details</p>
-									</a>
-								</div>
-							</div>
-						</div>
-                	</div>
-                </div>
-
-            </div>
-
-            <div class="panel panel-info">
-                <div class="panel-heading">We are with our cusomers - 16/07/2017</div>
-                <div class="panel-body">
-                	<div class="col-sm-3">
-                		<img src="images/events_carpet.jpg" class="img-thumbnail" alt="event carpet">
-                	</div>
-                	<div class="col-sm-9">
-                		<p>We are travelling with our users helping them for choosing 
-                		best producst which puts up smile on thier face. So far it is
-                		going good. We believe we will continue in the same direction. 
-                		</p>
-                	</div>
-                </div>
-            </div>
-
-            <div class="panel panel-info">
-                <div class="panel-heading">OffersPromo Inauguration - 20/02/2017</div>
-                <div class="panel-body">
-                	<div class="col-sm-3">
-                		<img src="images/ribbon_cutting.jpg" class="img-thumbnail" alt="inauguration">
-                	</div>
-                	<div class="col-sm-9">
-                		<p>We started our journey on this day. It is one of the remarkable day 
-                		in our life. We start with a hope of future.</p>
-                	</div>
-                </div>
-            </div>
+	                	</div>
+	                </div>
+	            </div>	        
+	        </div> 
         </div>
 		
 	</main>
 
 	<footer>
+		<div class="text-center social-icons">
+			<a href="https://www.facebook.com/profile.php?id=100018930644914" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+			<a href="UnderDevelopment.html" target="_blank"><i class="fa fa-twitter fa-2x"> </i></a>
+			<a href="UnderDevelopment.html" target="_blank"><i class="fa fa-feed fa-2x"> </i></a>	
+			<a href="UnderDevelopment.html" target="_blank"><i class="fa fa-linkedin fa-2x"> </i></a>	
+			<a href="https://www.youtube.com/channel/UCx2CAokV5Qh18DmtVYDImCg" target="_blank"><i class="fa fa-youtube fa-2x"> </i></a>	
+		</div>	
 
-		<div class="container footer">
-			<div class="text-center social-icons">
-				<a href="https://www.facebook.com/profile.php?id=100018930644914" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-				<a href="UnderDevelopment.html" target="_blank"><i class="fa fa-twitter fa-2x"> </i></a>
-				<a href="UnderDevelopment.html" target="_blank"><i class="fa fa-feed fa-2x"> </i></a>	
-				<a href="UnderDevelopment.html" target="_blank"><i class="fa fa-linkedin fa-2x"> </i></a>	
-				<a href="https://www.youtube.com/channel/UCx2CAokV5Qh18DmtVYDImCg" target="_blank"><i class="fa fa-youtube fa-2x"> </i></a>	
-			</div>	
-
-			<div class="row">
-				<div class="col-sm-offset-3 col-sm-8">
-					<div class="row footer-links-header">
-						<div class="col-sm-4">
-							Products From
-						</div>
-						<div class="col-sm-4">
-							Support
-						</div>
-						<div class="col-sm-4">
-							Help
-						</div>
+		<div class="row">
+			<div class="col-sm-offset-3 col-sm-8">
+				<div class="row footer-links-header">
+					<div class="col-sm-4">
+						Products From
 					</div>
-					<div class="row footer-links">
-						<div class="col-sm-4">
-							<a href="http://www.amazon.in/" target="_blank">Amazon.in</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="AdvertiseRequest.html">Advertise</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="AboutUs.html">About US</a>
-						</div>
+					<div class="col-sm-4">
+						Support
 					</div>
-					<div class="row footer-links">
-						<div class="col-sm-4">
-							<a href="https://www.flipkart.com/" target="_blank">Flipkart</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="BuyingGuide.html">Buying guide</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="ContactUs.html">Contact US</a>
-						</div>
+					<div class="col-sm-4">
+						Help
 					</div>
-					<div class="row footer-links">
-						<div class="col-sm-offset-4 col-sm-4">
-							<a href="CustomerSupport.html">Technical support</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="CompanyEvents.html">Events</a>
-						</div>
+				</div>
+				<div class="row footer-links">
+					<div class="col-sm-4">
+						<a href="http://www.amazon.in/" target="_blank">Amazon.in</a>
+					</div>
+					<div class="col-sm-4">
+						<a href="AdvertiseRequest.html">Advertise</a>
+					</div>
+					<div class="col-sm-4">
+						<a href="AboutUs.html">About US</a>
+					</div>
+				</div>
+				<div class="row footer-links">
+					<div class="col-sm-4">
+						<a href="https://www.flipkart.com/" target="_blank">Flipkart</a>
+					</div>
+					<div class="col-sm-4">
+						<a href="BuyingGuide.html">Buying guide</a>
+					</div>
+					<div class="col-sm-4">
+						<a href="ContactUs.html">Contact US</a>
+					</div>
+				</div>
+				<div class="row footer-links">
+					<div class="col-sm-offset-4 col-sm-4">
+						<a href="CustomerSupport.html">Technical support</a>
+					</div>
+					<div class="col-sm-4">
+						<a href="CompanyEvents.html">Events</a>
 					</div>
 				</div>
 			</div>
-
-			<div class="text-center policy-links">
-				<span><a href="PrivacyPolicy.html">Privacy Policy</a></span>
-				<span><a href="Cookies.html">Cookies</a></span>
-				<span><a href="TermsOfUse.html">Terms of Use</a></span>
-			</div>	
-
-			<div class="copyright text-center">
-				<i class="fa fa-copyright"> </i>
-				Copyright 2017 KANAVUGAL STUDIOS. All Rights Reserved
-			</div>	
 		</div>
 
+		<div class="text-center policy-links">
+			<span><a href="PrivacyPolicy.html">Privacy Policy</a></span>
+			<span><a href="Cookies.html">Cookies</a></span>
+			<span><a href="TermsOfUse.html">Terms of Use</a></span>
+		</div>	
+
+		<div class="copyright text-center">
+			<i class="fa fa-copyright"> </i>
+			Copyright 2017 KANAVUGAL STUDIOS. All Rights Reserved
+		</div>	
 	</footer>
 
 </body>
