@@ -53,7 +53,7 @@ Top Banner section - Start
 	font-family: mistral;
 	font-size: 3em;
 	padding-left: 20px;
-	color:#014B47;
+	color: rgb(15,210,150);
 	opacity: 0.9;
 }
 
@@ -61,7 +61,7 @@ Top Banner section - Start
 	font-family: Pristina;
 	opacity: 0.9;
 	font-size: 1.5em;
-	color:#063F00;
+	color: rgb(100,20,150);
 }
 
 .top-banner-sub-first span,
