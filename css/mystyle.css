@@ -14,7 +14,7 @@ Top Banner section - Start
 .top-banner{
 	display: flex;
 	align-items: center;
-	background-color: rgba(0,66,90,0.1);
+	background-color: rgb(10,130,90);
 	height: 70px;
 	color:#FFFFFF;
 }
@@ -53,7 +53,7 @@ Top Banner section - Start
 	font-family: mistral;
 	font-size: 3em;
 	padding-left: 20px;
-	color: rgb(15,210,150);
+	color: rgb(20,20,20);
 	opacity: 0.9;
 }
 
@@ -61,7 +61,7 @@ Top Banner section - Start
 	font-family: Pristina;
 	opacity: 0.9;
 	font-size: 1.5em;
-	color: rgb(100,20,150);
+	color: rgb(20,20,20);
 }
 
 .top-banner-sub-first span,
